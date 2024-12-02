@@ -1,0 +1,122 @@
+# Creating a basic HTML file structure for the user's personal website.
+# This will be saved as an HTML file and can be previewed in any browser.
+
+website_html = """
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Abid's Insight</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Arial', sans-serif;
+            background: linear-gradient(to right, #f3e6f5, #c1d3fe);
+            color: #333;
+        }
+        header {
+            text-align: center;
+            padding: 2rem;
+            background-color: #4b0082;
+            color: #fff;
+        }
+        header h1 {
+            font-size: 3rem;
+            margin: 0;
+        }
+        header p {
+            font-size: 1.2rem;
+            margin: 0.5rem 0 0;
+        }
+        nav {
+            display: flex;
+            justify-content: center;
+            background-color: #6a0dad;
+            padding: 1rem 0;
+        }
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            margin: 0 1rem;
+            font-weight: bold;
+        }
+        nav a:hover {
+            text-decoration: underline;
+        }
+        .section {
+            padding: 4rem 2rem;
+            text-align: center;
+        }
+        .section:nth-child(odd) {
+            background-color: #f8f8f8;
+        }
+        .section h2 {
+            font-size: 2rem;
+            margin-bottom: 1rem;
+        }
+        .section p {
+            max-width: 600px;
+            margin: 0 auto;
+            line-height: 1.6;
+        }
+        .gallery img {
+            width: 100%;
+            max-width: 300px;
+            margin: 1rem;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+        footer {
+            background-color: #4b0082;
+            color: #fff;
+            text-align: center;
+            padding: 2rem 0;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Abid's Insight</h1>
+        <p>Shaping Tomorrow with Today’s Knowledge</p>
+    </header>
+    <nav>
+        <a href="#articles">Articles</a>
+        <a href="#research">Research</a>
+        <a href="#gallery">Gallery</a>
+        <a href="#contact">Contact</a>
+    </nav>
+    <section class="section" id="articles">
+        <h2>Articles</h2>
+        <p>Explore a collection of my writings, thoughts, and insights.</p>
+    </section>
+    <section class="section" id="research">
+        <h2>Research</h2>
+        <p>Dive into my academic journey and cutting-edge research projects.</p>
+    </section>
+    <section class="section gallery" id="gallery">
+        <h2>Gallery</h2>
+        <p>A showcase of my photographs and graphic designs.</p>
+        <div>
+            <img src="https://via.placeholder.com/300" alt="Sample Image 1">
+            <img src="https://via.placeholder.com/300" alt="Sample Image 2">
+            <img src="https://via.placeholder.com/300" alt="Sample Image 3">
+        </div>
+    </section>
+    <section class="section" id="contact">
+        <h2>Contact</h2>
+        <p>Get in touch with me for collaborations or inquiries.</p>
+    </section>
+    <footer>
+        <p>&copy; 2024 Abid's Insight. All Rights Reserved.</p>
+    </footer>
+</body>
+</html>
+"""
+
+# Saving the file
+file_path = "/mnt/data/Abids_Insight_Website.html"
+with open(file_path, "w") as file:
+    file.write(website_html)
+
+file_path
